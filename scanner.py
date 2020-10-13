@@ -8,6 +8,9 @@ numpages = pdfReader.numPages
 text = []
 for page in range(numpages):
     pageObj = pdfReader.getPage(page)
-    text = text.append(pageObj.extractText().split('\n'))
-print(text)
+    obj = pageObj.extractText().split('\n')
+    for a in obj:
+        text.append(a)
+for i in range(len(text)):
+    print(text[i])
 
