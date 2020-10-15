@@ -12,9 +12,6 @@ for page in range(numpages):
     for a in obj:
         text.append(a)
 
-data = parseLine(text)
-print(data)
-
 
 #Read lines in the array, create dataframe with keywords, and amount columns
 def parseLine(textList):
@@ -41,3 +38,6 @@ def parseAmount(lineItem):
     if(lineItem.find('(')!= -1 and lineItem[lineItem.find('(')+1].isdigit()):
         digit *= -1
     return digit
+
+data = parseLine(text)
+print(data)
